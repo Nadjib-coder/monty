@@ -9,6 +9,7 @@
 int main(int *argc, int *argv[])
 {
 	FILE *fd;
+	ssize_t bytes_read;
 
 	if (argc != 2)
 	{
@@ -16,6 +17,7 @@ int main(int *argc, int *argv[])
 		exit(EXIT_FAILURE);
 	}
 	fd = open_file(argv[1]);
+	bytes_read = read_file(fd);
 
 	return (0);
 }
