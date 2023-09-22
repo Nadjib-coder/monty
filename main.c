@@ -13,8 +13,6 @@ int main(int argc, int *argv[])
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	execute_file(argv[1]);
-	free_stack();
 
 
 	return (0);
