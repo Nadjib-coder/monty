@@ -40,6 +40,11 @@ typedef struct instruction_s
 /* function declaration prototype */
 int open_file(const char *filename);
 ssize_t read_file(FILE *fd);
+void handle_error(const char *message, unsigned int line_number);
+void free_stack(void);
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+void execute_file(char *filename);
 
 #endif
 
