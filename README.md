@@ -18,7 +18,6 @@ is a language that aims to close the gap between scripting and programming langu
 
 ## Allowable opcodes and what they do;
 | opcode | functionality |
-| --- | --- |
 | push	| add element to the 'top' of stack and 'end' of queue. |
 | pop	| remove element from 'top' of stack and 'end' of queue. |
 | pall	| print every member of the structure. |
