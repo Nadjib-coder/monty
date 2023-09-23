@@ -19,6 +19,7 @@ is a language that aims to close the gap between scripting and programming langu
 ## Allowable opcodes and what they do;
 | opcode | functionality |
 | --- | --- |
+| queue, stack  | toggles the doubly link list implementation style. |
 | push	| add element to the 'top' of stack and 'end' of queue. |
 | pop	| remove element from 'top' of stack and 'end' of queue. |
 | pall	| print every member of the structure. |
@@ -34,7 +35,6 @@ is a language that aims to close the gap between scripting and programming langu
 | pstr	| print the character at the top of the stack. | 
 | rotl	| moves element at the top to the bottom of the stack. |
 | rotr	| the bottom of the stack becomes the top. |
-| queue, stack	| toggles the doubly link list implementation style. |
 | nop	| opcode should do nothing. |
 
 
