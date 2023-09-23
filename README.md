@@ -35,7 +35,8 @@ is a language that aims to close the gap between scripting and programming langu
 | rotl	| moves element at the top to the bottom of the stack. |
 | rotr	| the bottom of the stack becomes the top. |
 | nop	| opcode should do nothing. |
-
+| stack | sets the format of the data to a stack (LIFO). |
+| queue | sets the format of the data to a queue (FIFO). |
 
 ## Author
 - Nadjib Mouhoun: <a href= "https://nadjib-coder.github.io/nadjib/"> Portfolio </a>
