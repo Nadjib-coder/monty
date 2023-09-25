@@ -9,6 +9,7 @@
 int main(int argc, const char *argv[])
 {
 	const char *filename;
+	stack_t *stack = NULL;
 
 	if (argc != 2)
 	{
@@ -16,7 +17,7 @@ int main(int argc, const char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	filename = argv[1];
-	parse_file(filename);
+	parse_file(filename, &stack);
 
 	return (0);
 }

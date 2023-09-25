@@ -5,9 +5,10 @@
  * @instr: the instruction.
  * @line_number: the line when the instruction found for
  * error handling.
+ * @stack: the stack.
  * Return: Nothing.
  */
-void execute_instr(char *instr, unsigned int line_number)
+void execute_instr(stack_t **stack, char *instr, unsigned int line_number)
 {
 	char *opcode, *arg;
 
@@ -22,23 +23,23 @@ void execute_instr(char *instr, unsigned int line_number)
 				fprintf(stderr, "L%d: usage: push integer\n", line_number);
 				exit(EXIT_FAILURE);
 			}
-			push(&stack, atoi(arg));
+			push(stack, atoi(arg));
 		}
 		else if (strcmp(opcode, "pall") == 0)
 		{
-			pall(&stack, line_number);
+			pall(stack, line_number);
 		}
 		else if (strcmp(opcode, "pop") == 0)
 		{
-			pop(&stack, line_number);
+			pop(stack, line_number);
 		}
 		else if (strcmp(opcode, "pint") == 0)
 		{
-			pint(&stack, line_number);
+			pint(stack, line_number);
 		}
 		else if (strcmp(opcode, "swap") == 0)
 		{
-			swap(&stack, line_number);
+			swap(stack, line_number);
 		}
 		else
 		{
