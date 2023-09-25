@@ -10,6 +10,7 @@
 void execute_instr(char *instr, unsigned int line_number)
 {
 	char *opcode, *arg;
+	stack_t *stack = NULL;
 
 	opcode = strtok(instr, " \t\n");
 	if (opcode)
