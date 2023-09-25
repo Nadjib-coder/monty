@@ -37,6 +37,10 @@ void execute_instr(char *instr, unsigned int line_number)
 		{
 			pint(&stack, line_number);
 		}
+		else if (strcmp(opcode, "swap") == 0)
+		{
+			swap(&stack, line_number);
+		}
 		else
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
