@@ -7,6 +7,8 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+#define MAX_LINE_LENGTH 1024
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -37,10 +39,17 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/* globale varibale */
+extern stack_t *stack;
+
 /* function declaration prototype */
 int open_file(const char *filename);
 ssize_t read_file(FILE *fd);
 void pall(stack_t **stack, unsigned int line_number);
+void parse_file(const char *filename);
+void execute_instr(char *instr, unsigned int line_number);
+void push(stack_t **stack, int elem);
+void pop(stack_t **stack, unsigned int line_number);
 
 #endif
 
