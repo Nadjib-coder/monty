@@ -43,8 +43,6 @@ typedef struct instruction_s
 extern stack_t *stack;
 
 /* function declaration prototype */
-int open_file(const char *filename);
-ssize_t read_file(FILE *fd);
 void parse_file(const char *filename, stack_t **stack);
 void execute_instr(stack_t **stack, char *instr, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
