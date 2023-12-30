@@ -41,6 +41,8 @@ void execute_instr(stack_t **stack, char *instr, unsigned int line_number)
 			div_op(stack, line_number);
 		else if (strcmp(opcode, "mul") == 0)
 			mul(stack, line_number);
+		else if (strcmp(opcode, "mod") == 0)
+			mod(stack, line_number);
 		else
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
