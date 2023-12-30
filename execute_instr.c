@@ -12,7 +12,7 @@ void execute_instr(stack_t **stack, char *instr, unsigned int line_number)
 {
 	char *opcode, *arg;
 
-	if (instr[0] == "#")
+	if (instr[0] == '#')
 		return;
 	opcode = strtok(instr, " \t\n");
 	if (opcode)
